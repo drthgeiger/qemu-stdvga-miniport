@@ -120,6 +120,8 @@ int BOXV_dac_set( void *cx, unsigned start, unsigned count, void *pal )
 
 /* Detect the presence of a supported adapter and amount of installed
  * video memory. Returns zero if not found.
+ *
+ * dtg: Reported amount of installed video memory is wrong on QEMU std-vga implementation of bochs adapter.
  */
 int BOXV_detect( void *cx, unsigned long *vram_size )
 {
@@ -129,7 +131,6 @@ int BOXV_detect( void *cx, unsigned long *vram_size )
     boxv_id = vid_inw( cx, VBE_DISPI_IOPORT_DATA );
     if( vram_size ) {
         *vram_size = vid_ind( cx, VBE_DISPI_IOPORT_DATA );
-        *vram_size = 16777216; /* dtg: ugly hack because QEMU does not report correct framebuffer size */
     }
     if( boxv_id >= VBE_DISPI_ID0 && boxv_id <= VBE_DISPI_ID5 ) /* dtg: accept all versions of bochs adapter */
         return( boxv_id );

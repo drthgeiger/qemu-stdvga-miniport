@@ -16,12 +16,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName",     "The OS/2 Museum, Dr. Thomas Geiger"
             VALUE "FileDescription", "Boxvideo Video Miniport Driver"
-            VALUE "FileVersion",     "1.6.1"
+            VALUE "FileVersion",     "1.6.2"
             VALUE "InternalName",    "boxvideo.sys"
             VALUE "LegalCopyright",  "Copyright \251 2022 The OS/2 Museum"
             VALUE "OriginalFilename","boxvideo.sys"
             VALUE "ProductName",     "Sample Video Miniport"
-            VALUE "ProductVersion",  "1.6.1"
+            VALUE "ProductVersion",  "1.6.2"
         END
 
     END

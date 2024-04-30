@@ -241,7 +241,7 @@ VP_STATUS HwVidFindAdapter( PVOID HwDevExt, PVOID HwContext, PWSTR ArgumentStrin
 
     /* Verify that supported hardware is present. */
     chip_id = BOXV_detect( pExt, &pExt->FramebufLen );
-    pExt->FramebufLen = accessRanges[1].RangeLength; /* dtg: we must obtain fb length from pci region 0 data */
+    pExt->FramebufLen = accessRanges[1].RangeLength; /* dtg: we must obtain fb length from pci region 0 data as reported size from BOXV_detect is wrong on QEMU */
     if( !chip_id ) {
         /* If supported hardware was not found, free allocated resources. */
         pVirtAddr = &pExt->IoPorts;
