@@ -22,8 +22,7 @@ vidmini.Display   = 11  ; system32
 %BOXV% = BOXV.Mfg
 
 [BOXV.Mfg]
-%BOXV% SVGA = vidmini, PCI\VEN_80EE&DEV_BEEF
-
+%BOXV%  = vidmini, PCI\VEN_1234&DEV_1111
 
 ;
 ; General installation section
@@ -109,4 +108,4 @@ REG_DWORD     = 0x00010001
 
 DiskId    = "BOXV Installation Disk"
 GraphAdap = "Graphics Adapter"
-BOXV      = "VirtualBox"
+BOXV      = "QEMU std-vga"

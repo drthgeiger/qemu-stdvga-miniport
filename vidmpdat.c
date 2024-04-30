@@ -1,5 +1,6 @@
 /*****************************************************************************
 
+Copyright (c) 2024  Dr. Thomas Geiger    QEMU port
 Copyright (c) 2012  Michal Necasek
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -85,6 +86,8 @@ VIDEOMP_MODE    VideoModes[] = {
     MODE_RES( 2048, 1152 ),
     MODE_RES( 2048, 1536 ),
     MODE_RES( 2560, 1600 ),
+    MODE_RES( 2560, 2048 ), /* dtg: resolution added */
+    MODE_RES( 3840, 2048 ), /* dtg: resolution added */
     MODE_RES( 3840, 2160 ),
     MODE_RES( 4096, 2304 ),
     MODE_RES( 5120, 2880 )
